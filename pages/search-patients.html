@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Doctor's App</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+    
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- Custom CSS 2 -->
+    <link href="../dist/css/doctor-app.css" rel="stylesheet">
+    
+    <!--Fullcalendar css-->
+    <link rel='stylesheet' href='../js/fullcalendar-2.9.1/fullcalendar.css' />
+    
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Brand Name</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li style="margin-top:20px;">
+                            <div style="margin-left:10px;;margin-bottom:20px;">
+                                <img alt="image" class="img-circle" src="../image/doctor.jpg" style="width: 200px;">
+                            </div>
+                            
+                        </li>
+                        <li>
+                            <a href="doctor-schedule.html"><i class="fa fa-calendar-o fa-fw"></i> Doctor's Schedule</a>
+                        </li>
+                        <li>
+                            <a href="patient-registration.html"><i class="fa fa-user-plus fa-fw"></i> Register Patient</a>
+                            
+                        </li>
+                        <li class="active">
+                            <a href="search-patients.html"><i class="fa fa-table fa-fw"></i> Manage Appointment</a>
+                        </li>
+                        <li>
+                            <a href="shopdetails.html"><i class="fa fa-edit fa-fw"></i> Edit Shop Details</a>
+                        </li>
+                         <li>
+                            <a href="configure-shop.html"><i class="fa fa-cog fa-fw"></i> Configure Shop</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <!-- Page Content -->
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 mg_top_20">
+                    <div class="panel">
+                      <div class="panel-heading">
+                           Patient Details
+                      </div>
+                      <div class="panel-body">
+                     <div class="row">
+						<div class="col-lg-12">
+							<div class="ibox float-e-margins">
+								<div class="ibox-content">
+									<div class="row">
+											<div class="col-sm-3 pull-right">
+												<div class="input-group"><input type="text" placeholder="Search" class="input-sm form-control"> <span class="input-group-btn">
+																	<button type="button" class="btn btn-sm btn-primary"> Go!</button> </span></div>
+											</div>
+									</div>
+									<div class="table-responsive">
+											<table class="table table-striped">
+												<thead>
+												<tr>
+                                                    <th></th>
+													<th>Firstname</th>
+													<th>Lastname </th>
+													<th>Mobile Number </th>
+													<th>Qr Code</th>
+													<th>Postcode</th>
+                                                    <th>Patient Status</th>
+                                                    <th></th>
+												</tr>
+												</thead>
+												<tbody>
+												<tr>
+                                                    <td> <img alt="image" class=" img_css img-circle" src="../image/profile.jpg"></td>
+                                                    <td>Andy</td>
+                                                    <td>Freeman</td>
+													<td>07932167890</td>
+													<td>AF12345PE11ET</td>
+													<td>PE1 1ET</td>
+                                                    <td>Connected</td>
+                                                    <td><button type="button" data-toggle="tooltip"   onclick='navigatetobookappoinment();' title="Click this button to create a new appointment" class="btn btn-primary"><i class="fa fa-table fa-fw"></i></button></td> 
+                                                    <td><button type="button" data-toggle="tooltip" onclick='navigatetoviewhistory();'  title="Click this button to view,reschedule and cancel appointments"  class="btn btn-primary"><i class="fa fa-eye fa-fw"></i></button></td>
+                                                    <td><button type="button" onclick='navigatetoeditpatientdetails();' data-toggle="tooltip"  title="Click this button to edit patient details"  class="btn btn-primary"><i class="fa fa-edit fa-fw"></i> </button></td>
+												</tr>
+                                                <tr>
+                                                    <td> <img alt="image" class=" img_css img-circle" src="../image/profile2.jpg"></td>
+                                                    <td>Simon</td>
+                                                    <td>Sharma</td>
+													<td>07933467890</td>
+													<td>SS12346PE26ET</td>
+													<td>PE2 6ET</td>
+                                                    <td>Disconnected</td>
+                                                    <td><button type="button" data-toggle="tooltip"   onclick='navigatetobookappoinment();' title="Click this button to create a new appointment" class="btn btn-primary" disabled><i class="fa fa-table fa-fw"></i></button></td> 
+                                                    <td><button type="button" data-toggle="tooltip" onclick='navigatetoviewhistory();'  title="Click this button to view,reschedule and cancel appointments"  class="btn btn-primary" disabled><i class="fa fa-eye fa-fw"></i></button></td>
+                                                    <td><button type="button" onclick='navigatetoeditpatientdetails();' data-toggle="tooltip"  title="Click this button to edit patient details"  class="btn btn-primary" disabled><i class="fa fa-edit fa-fw"></i> </button></td>
+												</tr>
+                                                <tr>
+                                                    <td> <img alt="image" class=" img_css img-circle" src="../image/profile3.jpg"></td>
+                                                    <td>Natalia</td>
+                                                    <td>Jones</td>
+													<td>07566789043</td>
+													<td>NJ12347QER1ST</td>
+													<td>QER 1ST</td>
+                                                    <td>Connected</td>
+                                                    <td><button type="button" data-toggle="tooltip"   onclick='navigatetobookappoinment();' title="Click this button to create a new appointment" class="btn btn-primary"><i class="fa fa-table fa-fw"></i></button></td> 
+                                                    <td><button type="button" data-toggle="tooltip" onclick='navigatetoviewhistory();'  title="Click this button to view,reschedule and cancel appointments"  class="btn btn-primary"><i class="fa fa-eye fa-fw"></i></button></td>
+                                                    <td><button type="button" onclick='navigatetoeditpatientdetails();' data-toggle="tooltip"  title="Click this button to edit patient details"  class="btn btn-primary"><i class="fa fa-edit fa-fw"></i> </button></td>
+												</tr>
+                                                <tr>
+                                                    <td> <img alt="image" class=" img_css img-circle" src="../image/profile4.jpg"></td>
+                                                    <td>George</td>
+                                                    <td>McMohan</td>
+													<td>07889167678</td>
+													<td>GM12348LET1ST</td>
+													<td>LET 1ST</td>
+												    <td>Connected</td>
+                                                    <td><button type="button" data-toggle="tooltip"   onclick='navigatetobookappoinment();' title="Click this button to create a new appointment" class="btn btn-primary"><i class="fa fa-table fa-fw"></i></button></td> 
+                                                    <td><button type="button" data-toggle="tooltip" onclick='navigatetoviewhistory();'  title="Click this button to view,reschedule and cancel appointments"  class="btn btn-primary"><i class="fa fa-eye fa-fw"></i></button></td>
+                                                    <td><button type="button" onclick='navigatetoeditpatientdetails();' data-toggle="tooltip"  title="Click this button to edit patient details"  class="btn btn-primary"><i class="fa fa-edit fa-fw"></i> </button></td>
+												</tr>
+                                                <tr>
+                                                    <td> <img alt="image" class=" img_css img-circle" src="../image/profile5.jpg"></td>
+                                                    <td>Lee</td>
+                                                    <td>Chung</td>
+													<td>07890657890</td>
+													<td>LC12349SX11ET</td>
+													<td>SX1 1ET</td>
+                                                    <td>Connected</td>
+                                                    <td><button type="button" data-toggle="tooltip"   onclick='navigatetobookappoinment();' title="Click this button to create a new appointment" class="btn btn-primary"><i class="fa fa-table fa-fw"></i></button></td> 
+                                                    <td><button type="button" data-toggle="tooltip" onclick='navigatetoviewhistory();'  title="Click this button to view,reschedule and cancel appointments"  class="btn btn-primary"><i class="fa fa-eye fa-fw"></i></button></td>
+                                                    <td><button type="button" onclick='navigatetoeditpatientdetails();' data-toggle="tooltip"  title="Click this button to edit patient details"  class="btn btn-primary"><i class="fa fa-edit fa-fw"></i> </button></td>
+												</tr>
+                                                <tr>
+                                                    <td> <img alt="image" class=" img_css img-circle" src="../image/profile6.jpg"></td>
+                                                    <td>Pete</td>
+                                                    <td>Samules</td>
+													<td>07932167890</td>
+													<td>PS12350VS11ET</td>
+													<td>VS1 1ET</td>
+												    <td>Connected</td>
+                                                    <td><button type="button" data-toggle="tooltip"   onclick='navigatetobookappoinment();' title="Click this button to create a new appointment" class="btn btn-primary"><i class="fa fa-table fa-fw"></i></button></td> 
+                                                    <td><button type="button" data-toggle="tooltip" onclick='navigatetoviewhistory();'  title="Click this button to view,reschedule and cancel appointments"  class="btn btn-primary"><i class="fa fa-eye fa-fw"></i></button></td>
+                                                    <td><button type="button" onclick='navigatetoeditpatientdetails();' data-toggle="tooltip"  title="Click this button to edit patient details"  class="btn btn-primary"><i class="fa fa-edit fa-fw"></i> </button></td>
+												</tr>
+                                                <tr>
+                                                    <td> <img alt="image" class=" img_css img-circle" src="../image/profile7.jpg"></td>
+                                                    <td>Wahida</td>
+                                                    <td>Rahman</td>
+													<td>07876895432</td>
+													<td>WR12351ZX1CET</td>
+													<td>ZX1 CET</td>
+												    <td>Connected</td>
+                                                    <td><button type="button" data-toggle="tooltip"   onclick='navigatetobookappoinment();' title="Click this button to create a new appointment" class="btn btn-primary"><i class="fa fa-table fa-fw"></i></button></td> 
+                                                    <td><button type="button" data-toggle="tooltip" onclick='navigatetoviewhistory();'  title="Click this button to view,reschedule and cancel appointments"  class="btn btn-primary"><i class="fa fa-eye fa-fw"></i></button></td>
+                                                    <td><button type="button" onclick='navigatetoeditpatientdetails();' data-toggle="tooltip"  title="Click this button to edit patient details"  class="btn btn-primary"><i class="fa fa-edit fa-fw"></i> </button></td>
+												</tr>
+                                                <tr>
+                                                    <td> <img alt="image" class=" img_css img-circle" src="../image/profile8.jpg"></td>
+                                                    <td>Jose</td>
+                                                    <td>Warinka</td>
+													<td>07789065743</td>
+													<td>JW12352PE11ET</td>
+													<td>PE1 1ET</td>
+												    <td>Connected</td>
+                                                    <td><button type="button" data-toggle="tooltip"   onclick='navigatetobookappoinment();' title="Click this button to create a new appointment" class="btn btn-primary"><i class="fa fa-table fa-fw"></i></button></td> 
+                                                    <td><button type="button" data-toggle="tooltip" onclick='navigatetoviewhistory();'  title="Click this button to view,reschedule and cancel appointments"  class="btn btn-primary"><i class="fa fa-eye fa-fw"></i></button></td>
+                                                    <td><button type="button" onclick='navigatetoeditpatientdetails();' data-toggle="tooltip"  title="Click this button to edit patient details"  class="btn btn-primary"><i class="fa fa-edit fa-fw"></i> </button></td>
+												</tr>
+                                                <tr>
+                                                    <td> <img alt="image" class=" img_css img-circle" src="../image/profile9.jpg"></td>
+                                                    <td>Dave</td>
+                                                    <td>Wright</td>
+													<td>07456738909</td>
+													<td>DW12353RX61ET</td>
+													<td>RX6 1ET</td>
+												    <td>Connected</td>
+                                                    <td><button type="button" data-toggle="tooltip"   onclick='navigatetobookappoinment();' title="Click this button to create a new appointment" class="btn btn-primary"><i class="fa fa-table fa-fw"></i></button></td> 
+                                                    <td><button type="button" data-toggle="tooltip" onclick='navigatetoviewhistory();'  title="Click this button to view,reschedule and cancel appointments"  class="btn btn-primary"><i class="fa fa-eye fa-fw"></i></button></td>
+                                                    <td><button type="button" onclick='navigatetoeditpatientdetails();' data-toggle="tooltip"  title="Click this button to edit patient details"  class="btn btn-primary"><i class="fa fa-edit fa-fw"></i> </button></td>
+												</tr>
+                                                </tbody> 
+											</table>
+                                            <ul class="pagination pagination-sm pull-right">
+                                                      <li class="active"><a href="#">1</a></li>
+                                                      <li><a href="#">2</a></li>
+                                                      <li><a href="#">3</a></li>
+                                                      <li><a href="#">4</a></li>
+                                                      <li><a href="#">5</a></li>
+                                            </ul>
+										</div>
+
+									</div>
+								</div>
+							</div>
+                        </div>                        
+	                </div>
+				 </div>
+			</div>
+		</div>
+                   
+                
+               </div>
+               
+            <!-- /.container-fluid -->
+            </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+      
+   <script>
+   $(document).ready(function(){
+       $('[data-toggle=tooltip]').tooltip();
+       
+   }) ;
+   </script>
+   <script>
+    function navigatetobookappoinment(){
+        window.location='book-appointment.html';
+    }
+     function navigatetoviewhistory(){
+        
+         window.location='view-history.html';   
+    }
+    function navigatetoeditpatientdetails(){
+        window.location='edit-patient-details.html';
+    }   
+       
+    </script>
+    
+   
+
+</body>
+
+</html>
